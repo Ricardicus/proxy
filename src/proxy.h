@@ -29,10 +29,13 @@ extern "C" {
 
 #define WELL_KNOWN_LIMIT		1024
 
-#define STD_PROXY_HOST			"www.dn.se"
+#define STD_PROXY_HOST			"www.dn.se" // I like to read the news, so this is the standard for now
 #define STD_PROXY_PORT			80
 
 #define CONFIG_FILE 			".config"
+
+#define CONFIG_PROXY 			"PROXY:"
+#define CONFIG_SETTING			"SETTING:"
 
 typedef struct server_course_of_action_t {
 	void *(*callback)(void*);

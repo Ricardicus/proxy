@@ -16,12 +16,12 @@ int read_and_configure_proxy(int *proxy, int *setting) {
 	memset(buffer, '\0', sizeof buffer);
 
 	while ( fgets(buffer, sizeof buffer , fp) != NULL ) {
-		if ( ! strncmp(buffer, "PROXY:", strlen("PROXY:")) ) {
-			proxy_set = atoi(buffer + strlen("PROXY:") );
+		if ( ! strncmp(buffer, CONFIG_PROXY, strlen(CONFIG_PROXY)) ) {
+			proxy_set = atoi(buffer + strlen(CONFIG_PROXY) );
 			if ( proxy_set < WELL_KNOWN_LIMIT ) 
 				return INVALID_PROXY_PORT;
-		} else if ( ! strncmp(buffer, "SETTINGS:", strlen("SETTINGS:")) ) {
-			setting_set = atoi(buffer + strlen("SETTINGS:") );
+		} else if ( ! strncmp(buffer, CONFIG_SETTING, strlen(CONFIG_SETTING)) ) {
+			setting_set = atoi(buffer + strlen(CONFIG_SETTING) );
 			if ( setting_set < WELL_KNOWN_LIMIT ) 
 				return INVALID_PROXY_PORT;
 		}
@@ -30,7 +30,7 @@ int read_and_configure_proxy(int *proxy, int *setting) {
 
 	fclose(fp);
 
-	if ( setting_set < WELL_KNOWN_LIMIT && proxy_set < WELL_KNOWN_LIMIT )
+	if ( setting_set < WELL_KNOWN_LIMIT || proxy_set < WELL_KNOWN_LIMIT )
 		return INVALID_CONFIG_FILE;
 
 	*proxy = proxy_set;
