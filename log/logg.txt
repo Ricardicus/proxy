@@ -1,0 +1,139 @@
+Proxy v.1, c. Jul 16 2017 20:04:18
+[Sun Jul 16 20:04:36 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:04:57 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:05:17 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:06:09
+[Sun Jul 16 20:06:14 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:06:34 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:06:54 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:07:08
+[Sun Jul 16 20:07:14 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:07:34 2017] 127.0.0.1: GET / HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:07:38
+[Sun Jul 16 20:07:44 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:07:44 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:08:35
+[Sun Jul 16 20:08:38 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:08:38 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:08:58
+[Sun Jul 16 20:09:03 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:09:03 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:11:51
+[Sun Jul 16 20:11:54 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:14:22
+[Sun Jul 16 20:14:24 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:14:44 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:15:04 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:15:08
+[Sun Jul 16 20:15:13 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:15:13 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:24:23
+[Sun Jul 16 20:24:30 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:24:30 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:24:30 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:25:09 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:26:01
+[Sun Jul 16 20:26:03 2017] 127.0.0.1: GET / HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:26:38
+[Sun Jul 16 20:26:43 2017] 127.0.0.1: GET / HTTP/1.1
+ERROR on binding
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:26:38
+Proxy v.1, c. Jul 16 2017 20:27:17
+[Sun Jul 16 20:27:22 2017] 127.0.0.1: GET / HTTP/1.1
+ERROR on binding
+Proxy v.1, c. Jul 16 2017 20:27:49
+[Sun Jul 16 20:27:56 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:28:02 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 16 2017 20:31:05
+[Sun Jul 16 20:31:07 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:31:14 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+[Sun Jul 16 20:31:57 2017] 127.0.0.1: GET / HTTP/1.1
+[Sun Jul 16 20:32:57 2017] 127.0.0.1: GET /ajax/usercontext?rnd=wlft072xdnp0 HTTP/1.1
+[Sun Jul 16 20:34:17 2017] 127.0.0.1: GET /sthlm/far-stort-stod-efter-bild-pa-blodiga-byxor/ HTTP/1.1
+ERROR, no port provided
+Proxy v.1, c. Jul 17 2017 15:38:18
+[Mon Jul 17 15:38:35 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:39:43
+[Mon Jul 17 15:39:46 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:39:46 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:40:09
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:40:09
+[Mon Jul 17 15:40:53 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:40:53 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:41:46
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:41:46
+[Mon Jul 17 15:42:12 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:42:15
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:42:26
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:42:26
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:42:26
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:42:26
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:42:26
+[Mon Jul 17 15:42:49 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:42:49 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:43:07
+[Mon Jul 17 15:43:17 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:43:17 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+[Mon Jul 17 15:43:40 2017] 127.0.0.1: GET /nyheter/varlden/besokare-pa-hogerextrem-konsert-gjorde-hitlerhalsning/ HTTP/1.1
+[Mon Jul 17 15:44:40 2017] 127.0.0.1: GET /ajax/usercontext?rnd=kgq91p1ndkq0 HTTP/1.1
+[Mon Jul 17 15:44:47 2017] 127.0.0.1: GET /nyheter/varlden/amnestychef-och-svensk-kan-atalas-i-turkiet-i-dag/ HTTP/1.1
+[Mon Jul 17 15:45:21 2017] 127.0.0.1: GET /ajax/usercontext?rnd=of3w0qhl9z00 HTTP/1.1
+[Mon Jul 17 15:45:33 2017] 127.0.0.1: GET /kultur-noje/kulturdebatt/elisabeth-gerle-darfor-ar-det-dags-att-gora-upp-med-den-svenska-religionsblindheten/ HTTP/1.1
+[Mon Jul 17 15:46:33 2017] 127.0.0.1: GET /ajax/usercontext?rnd=uo851sdodh70 HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:48:58
+[Mon Jul 17 15:49:02 2017] 127.0.0.1: GET /kultur-noje/kulturdebatt/elisabeth-gerle-darfor-ar-det-dags-att-gora-upp-med-den-svenska-religionsblindheten/ HTTP/1.1
+[Mon Jul 17 15:49:05 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+[Mon Jul 17 15:50:02 2017] 127.0.0.1: GET /ajax/usercontext?rnd=48sdey0cvl80 HTTP/1.1
+[Mon Jul 17 15:50:25 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:51:04 2017] 127.0.0.1: GET /debatt/obekvama-beslut-kravs-for-att-motverka-terrorismen/ HTTP/1.1
+[Mon Jul 17 15:52:04 2017] 127.0.0.1: GET /ajax/usercontext?rnd=jxl1g19qy3p0 HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:52:49
+[Mon Jul 17 15:52:52 2017] 127.0.0.1: GET /debatt/obekvama-beslut-kravs-for-att-motverka-terrorismen/ HTTP/1.1
+[Mon Jul 17 15:52:53 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+[Mon Jul 17 15:52:56 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 15:52:56 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+Proxy v.1, c. Jul 17 2017 15:53:23
+handle_incoming.71 ERROR on binding
+Proxy v.1, c. Jul 17 2017 15:53:36
+[Mon Jul 17 15:53:41 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 17 2017 16:36:22
+[Mon Jul 17 16:36:38 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 16:36:43 2017] 127.0.0.1: GET /ajax/usercontext?rnd=53zmsyvls6j0 HTTP/1.1
+[Mon Jul 17 16:36:49 2017] 127.0.0.1: GET /nyheter/sverige/stefan-lofven-ku-anmals-efter-transportstyrelens-it-skandal/ HTTP/1.1
+[Mon Jul 17 16:36:50 2017] 127.0.0.1: GET /favicon.ico HTTP/1.1
+[Mon Jul 17 16:37:34 2017] 127.0.0.1: GET /ajax/usercontext?rnd=kt44xsm0y700 HTTP/1.1
+Proxy v.1, c. Jul 17 2017 16:36:22
+[Mon Jul 17 21:30:37 2017] 127.0.0.1: GET / HTTP/1.1
+[Mon Jul 17 21:30:47 2017] 127.0.0.1: GET /kultur-noje/gustaf-andersson-linnea-claessons-sommar-i-p1-borde-spelas-upp-i-skolorna/ HTTP/1.1
+[Mon Jul 17 21:31:44 2017] 127.0.0.1: GET /kultur-noje/ HTTP/1.1
+Proxy v.1, c. Jul 19 2017 23:31:30
+[Wed Jul 19 23:31:46 2017] 127.0.0.1: GET / HTTP/1.1
+Proxy v.1, c. Jul 19 2017 23:31:30
+handle_incoming.99 ERROR on binding
+Proxy v.1, c. Jul 19 2017 23:31:30
+handle_incoming.99 ERROR on binding
+Proxy v.1, c. Jul 19 2017 23:31:30
+Proxy v.1, c. Jul 20 2017 00:06:16
+[Thu Jul 20 00:08:33 2017] 127.0.0.1: GET / HTTP/1.1
+[Thu Jul 20 00:09:34 2017] 127.0.0.1: GET /ajax/usercontext?rnd=4duyd6dzxf70 HTTP/1.1
+Proxy v.1, c. Jul 20 2017 00:06:16
+handle_incoming.99 ERROR on binding
+handle_incoming.99 ERROR on binding
+Proxy v.1, c. Jul 20 2017 00:11:14
+Proxy v.1, c. Jul 20 2017 00:24:50
+handle_incoming.105 ERROR on binding
+Proxy v.1, c. Jul 20 2017 00:25:15
+[Thu Jul 20 00:28:14 2017] 127.0.0.1: GET / HTTP/1.1
