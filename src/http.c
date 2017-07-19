@@ -776,6 +776,117 @@ void * http_settings_callback(void * http_data_ptr) {
 	return NULL;
 }
 
+static int client_socket = 0;
+static int remote_socket = 0;
+
+int fd(void)
+{
+	unsigned int fd = client_socket;
+	if (fd < remote_socket)
+	{
+		fd = remote_socket;
+	}
+	return fd + 1;
+}
+
+void * tunnel_callback(void * http_data_ptr)
+{
+	http_data_t * http_data = (http_data_t *) http_data_ptr;
+	int socket = (int) *http_data->socket, proxy_socket;
+	proxy_domain_t * domain = http_data->proxy_session;
+	char *client_ip = http_data->client_ip, *time = http_data->accept_time,
+		tmp_buffer[128];
+	size_t read_sz = 0, buffer_size = BUFFER_INCREMENT;
+
+	fd_set io;
+	char * buffer;
+
+	buffer = calloc(BUFFER_INCREMENT,1);
+
+	if ( buffer == NULL ) {
+		printf("CALLOC FAIL\n");
+		return NULL;
+	}
+
+	// look at the first line of 'buffer' and do what you got to do..
+	proxy_socket = make_contact(domain->url, domain->port);
+	
+	if ( proxy_socket < 0 ) {
+		printf("Host: %s:%d unreachable. Please recongifure proxy domain.\n", domain->url, domain->port);
+		return NULL;
+	}
+
+	client_socket = socket;
+	remote_socket = proxy_socket;
+
+	for (;;)
+	{
+		FD_ZERO(&io);
+		FD_SET(socket, &io);
+		FD_SET(proxy_socket, &io);
+
+		memset(buffer, 0, BUFFER_INCREMENT);
+
+		if (select(fd(), &io, NULL, NULL, NULL) < 0)
+		{
+			perror("use_tunnel: select()");
+			break;
+		}
+
+		if (FD_ISSET(client_socket, &io))
+		{
+			int count = recv(client_socket, buffer, sizeof(buffer), 0);
+			if (count < 0)
+			{
+				perror("use_tunnel: recv(rc.client_socket)");
+				close(client_socket);
+				close(remote_socket);
+				free(buffer);
+				return NULL;
+			}
+
+			if (count == 0)
+			{
+				close(client_socket);
+				close(remote_socket);
+				free(buffer);
+				return NULL;
+			}
+
+			send(remote_socket, buffer, count, 0);
+
+		}
+
+		if (FD_ISSET(remote_socket, &io))
+		{
+			int count = recv(remote_socket, buffer, sizeof(buffer), 0);
+			if (count < 0)
+			{
+				perror("use_tunnel: recv(rc.remote_socket)");
+				close(client_socket);
+				close(remote_socket);
+				free(buffer);
+				return NULL;
+			}
+
+			if (count == 0)
+			{
+				close(client_socket);
+				close(remote_socket);
+				free(buffer);
+				return NULL;
+			}
+
+			send(client_socket, buffer, count, 0);
+		}
+	}
+
+	free(buffer);
+
+	return NULL;
+
+}
+
 void * http_proxy_callback(void * http_data_ptr)
 {
 

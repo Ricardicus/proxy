@@ -32,9 +32,12 @@ extern "C" {
 #define BACKEND_MAX_ARRAY_SIZE			100
 #define VERSION							1
 #define MAXIMUM_READ_SIZE				(1<<22)
-#define BUFFER_INCREMENT				(1<<10)
+#define BUFFER_INCREMENT				(1<<15)
 #define STACK_BUFFER_SIZE	(1<<12)
 #define MAX_LINE_SIZE		(512)
+
+#define HTTP_PORT			80
+#define HTTPS_PORT			443
 
 #define SETTINGS_FILE		"index.html"
 #define NOT_FOUND_FILE		"html/404.txt"
@@ -56,12 +59,12 @@ typedef int (*http_header_callback_t) (int);
 
 void free_http_data(http_data_t **);
 
-
 int http_init(void);
 void output_path(int, const char *);
 void output_host_and_port(int);
 int configure_host_and_port(char *, char *); 
 void * http_proxy_callback(void *);
+void * tunnel_callback(void *);
 void * http_settings_callback(void *);
 void parse_http_get_headers_and_arguments(hashtable_t *, char *, size_t);
 

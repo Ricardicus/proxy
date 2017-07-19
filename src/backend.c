@@ -61,7 +61,7 @@ SETTING:[desired port for setting proxy domain over http]\n");
 
 	log("Proxy v.%s, c. %s %s\n",str(VERSION),__DATE__,__TIME__);
 
-	proxy_action.callback = http_proxy_callback;
+	proxy_action.callback = http_proxy_callback; // Now only works from http.. tunnel_callback might do the trick for https in the future
 	proxy_action.port = proxy_port;
 	proxy_action.type = PROXY;
 
