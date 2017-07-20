@@ -698,9 +698,8 @@ void * http_settings_callback(void * http_data_ptr) {
 	http_data_t * http_data = (http_data_t *) http_data_ptr;
 	int socket = (int) *http_data->socket, status;
 	hashtable_t * params;
-	char buffer[1024], *path, *file_type, *msg, 
+	char buffer[1024], *path, *msg, 
 		*action, *host, *port; // Will be sufficient, for most cases.. Cookies 
-	http_header_callback_t callback;
 
 	params = new_hashtable(30, 0.8);
 
@@ -794,9 +793,6 @@ void * tunnel_callback(void * http_data_ptr)
 	http_data_t * http_data = (http_data_t *) http_data_ptr;
 	int socket = (int) *http_data->socket, proxy_socket;
 	proxy_domain_t * domain = http_data->proxy_session;
-	char *client_ip = http_data->client_ip, *time = http_data->accept_time,
-		tmp_buffer[128];
-	size_t read_sz = 0, buffer_size = BUFFER_INCREMENT;
 
 	fd_set io;
 	char * buffer;

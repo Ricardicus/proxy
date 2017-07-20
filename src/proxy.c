@@ -41,8 +41,6 @@ int read_and_configure_proxy(int *proxy, int *setting) {
 
 int configure_host_and_port(char* host, char * port_ch ) 
 {
-	int port;
-
 	if ( proxy_session == NULL ) 
 		proxy_session = malloc(sizeof(proxy_session));
 
@@ -55,8 +53,6 @@ int configure_host_and_port(char* host, char * port_ch )
 void output_proxy_configuration_as_json(int socket) 
 {
 	char buffer[524], *msg;
-	int this_proxy_port = 0;
-	FILE *fp;
 
 	if ( proxy_session == NULL ) {
 		msg = "{\"Host\":\"None configured\", \"Port\":\"None configured\", \"Proxy_Port\":\"None configured\"}";
@@ -77,7 +73,6 @@ void * handle_incoming(void * data)
 	time_t raw_time;
 	struct tm * time_info;
 	char client_IP[INET_ADDRSTRLEN];
-	pthread_t input_reader_thread, file_reader_thread;
 	struct sockaddr_in serv_addr, cli_addr;
 	char * time_heap, * client_ip_heap, *time_c, *c_ptr;
 	int * newsockfd;

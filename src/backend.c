@@ -19,15 +19,9 @@ void * input_reader_callback(void * data)
 
 int main(int argc, char *argv[])
 {
-	int sockfd, proxy_port, settings_port, newsockfd_stack;
-	socklen_t clilen; 
-	time_t raw_time;
-	struct tm * time_info;
-	char client_IP[INET_ADDRSTRLEN];
+	int sockfd, proxy_port, settings_port;
 	pthread_t proxy_callback_thread, proxy_settings_thread;
-	struct sockaddr_in serv_addr, cli_addr;
-	char * time_heap, * client_ip_heap, *time_c, *c_ptr;
-	int * newsockfd;
+	struct sockaddr_in serv_addr;
 
 	server_course_of_action_t proxy_action;
 	server_course_of_action_t setting_action;
