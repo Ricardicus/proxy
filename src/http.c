@@ -819,7 +819,7 @@ void * tunnel_callback(void * http_data_ptr)
 
 	for (;;)
 	{
-		printf("In tunnel for loop..\n");
+		//printf("In tunnel for loop..\n");
 		FD_ZERO(&io);
 		FD_SET(socket, &io);
 		FD_SET(proxy_socket, &io);
