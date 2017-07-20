@@ -812,15 +812,18 @@ void * tunnel_callback(void * http_data_ptr)
 	proxy_socket = make_contact(domain->url, domain->port);
 	
 	if ( proxy_socket < 0 ) {
-		printf("Host: %s:%d unreachable. Please recongifure proxy domain.\n", domain->url, domain->port);
+		printf("Host: %s:%d unreachable. Please reconfigure proxy domain.\n", domain->url, domain->port);
 		return NULL;
 	}
 
 	client_socket = socket;
 	remote_socket = proxy_socket;
 
+	int latest_print = 0;
+
 	for (;;)
 	{
+		printf("In tunnel for loop..\n");
 		FD_ZERO(&io);
 		FD_SET(socket, &io);
 		FD_SET(proxy_socket, &io);
@@ -835,6 +838,9 @@ void * tunnel_callback(void * http_data_ptr)
 
 		if (FD_ISSET(client_socket, &io))
 		{
+			if ( latest_print !=  1)
+				printf("1\n");
+			latest_print = 1;
 			int count = recv(client_socket, buffer, sizeof(buffer), 0);
 			if (count < 0)
 			{
@@ -859,6 +865,9 @@ void * tunnel_callback(void * http_data_ptr)
 
 		if (FD_ISSET(remote_socket, &io))
 		{
+			if ( latest_print !=  2)
+				printf("2\n");
+			latest_print = 2;
 			int count = recv(remote_socket, buffer, sizeof(buffer), 0);
 			if (count < 0)
 			{
@@ -880,6 +889,7 @@ void * tunnel_callback(void * http_data_ptr)
 			send(client_socket, buffer, count, 0);
 		}
 	}
+	printf("Bye\n");
 
 	free(buffer);
 
