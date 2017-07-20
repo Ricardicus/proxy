@@ -837,7 +837,7 @@ void * tunnel_callback(void * http_data_ptr)
 			if ( latest_print !=  1)
 				printf("1\n");
 			latest_print = 1;
-			int count = recv(client_socket, buffer, sizeof(buffer), 0);
+			int count = recv(client_socket, buffer, BUFFER_INCREMENT, 0);
 			if (count < 0)
 			{
 				perror("use_tunnel: recv(rc.client_socket)");
@@ -864,7 +864,7 @@ void * tunnel_callback(void * http_data_ptr)
 			if ( latest_print !=  2)
 				printf("2\n");
 			latest_print = 2;
-			int count = recv(remote_socket, buffer, sizeof(buffer), 0);
+			int count = recv(remote_socket, buffer, BUFFER_INCREMENT, 0);
 			if (count < 0)
 			{
 				perror("use_tunnel: recv(rc.remote_socket)");
