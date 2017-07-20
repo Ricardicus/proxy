@@ -855,6 +855,7 @@ void * tunnel_callback(void * http_data_ptr)
 				return NULL;
 			}
 
+			printf("Attempt to send:  %s", buffer);
 			send(remote_socket, buffer, count, 0);
 
 		}
@@ -882,6 +883,7 @@ void * tunnel_callback(void * http_data_ptr)
 				return NULL;
 			}
 
+			printf("Attempt to send:  %s", buffer);
 			send(client_socket, buffer, count, 0);
 		}
 	}
